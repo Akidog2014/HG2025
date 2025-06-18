@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragebaum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .frage {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (min-width: 600px) {
+      button {
+        width: auto;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="frage1" class="frage">
+    <h2>Sind die Beteiligten:</h2>
+    <ul>
+      <li>verheiratet oder waren sie bis vor einem Jahr verheiratet?</li>
+      <li>in einer hetero- oder homosexuellen Lebensbeziehung und leben auf unbestimmte Zeit in einem gemeinsamen Haushalt?</li>
+      <li>in einer eingetragenen Partnerschaft oder waren sie bis vor einem Jahr in einer solchen?</li>
+      <li>in einer familiären Beziehung (Erwachsene-Kinder / Kinder bis 18 Jahren)?</li>
+    </ul>
+    <button onclick="zeigeFrage('frage2')">Ja</button>
+    <button onclick="zeigeFrage('frageNichtHG')">Nein</button>
+  </div>
+
+  <div id="frageNichtHG" class="frage">
+    <p><strong>Es handelt sich nicht um häusliche Gewalt.</strong></p>
+  </div>
+
+  <div id="frage2" class="frage">
+    <p>Frage 2: Sind die Beteiligten bereits verzeichnet bei der Polizei?</p>
+    <button onclick="zeigeFrage('frage6')">Ja</button>
+    <button onclick="zeigeFrage('frage3')">Nein</button>
+  </div>
+
+  <div id="frage3" class="frage">
+    <p>Frage 3: Wurde einer der Beteiligten bedroht oder Opfer einer Körperverletzung?</p>
+    <button onclick="zeigeFrage('frage6')">Ja</button>
+    <button onclick="zeigeFrage('frage4')">Nein</button>
+  </div>
+
+  <div id="frage4" class="frage">
+    <p>Frage 4: Macht einer der beteiligten Personen wiederholte Tätlichkeit geltend?</p>
+    <button onclick="zeigeFrage('frage6')">Ja</button>
+    <button onclick="zeigeFrage('frage5')">Nein</button>
+  </div>
+
+  <div id="frage5" class="frage">
+    <p>Frage 5: Stellt eine der betroffenen Personen Strafantrag?</p>
+    <button onclick="zeigeFrage('frage14')">Ja</button>
+    <button onclick="zeigeFrage('frage15')">Nein</button>
+  </div>
+
+  <div id="frage6" class="frage">
+    <p>Frage 6: Befinden sich Kinder im Haushalt?</p>
+    <button onclick="zeigeFrage('frage7')">Ja</button>
+    <button onclick="zeigeFrage('frage8')">Nein</button>
+  </div>
+
+  <div id="frage7" class="frage">
+    <p>Frage 7: Es handelt sich um ein Offizialdelikt!</p>
+    <ul>
+      <li>Ereigniseintrag-Anzeige</li>
+      <li>Gefährdungsmeldung</li>
+      <li>Strafantrag einholen</li>
+      <li>Rapport eröffnen</li>
+    </ul>
+  </div>
+
+  <div id="frage8" class="frage">
+    <p>Frage 8: Es handelt sich um ein Offizialdelikt!</p>
+    <ul>
+      <li>Ereigniseintrag-Anzeige</li>
+      <li>Strafantrag einholen</li>
+      <li>Rapport eröffnen</li>
+    </ul>
+  </div>
+
+  <div id="frage9" class="frage">
+    <p>Frage 9: Es handelt sich um ein Offizialdelikt!</p>
+    <ul>
+      <li>Ereigniseintrag-Anzeige</li>
+      <li>Gefährdungsmeldung</li>
+      <li>Strafantrag einholen</li>
+      <li>Rapport eröffnen</li>
+    </ul>
+  </div>
+
+  <div id="frage10" class="frage">
+    <p>Frage 10: Es handelt sich um ein Offizialdelikt!</p>
+    <ul>
+      <li>Ereigniseintrag-Anzeige</li>
+      <li>Strafantrag einholen</li>
+      <li>Rapport eröffnen</li>
+    </ul>
+  </div>
+
+  <div id="frage11" class="frage">
+    <p>Frage 11: Wenn die Beteiligten keine Strafanzeige stellen, keine Schutzmassnahmen erhoben wurden und keine Kinder im Haushalt befinden, ist folgendes zu erstellen:</p>
+    <ul>
+      <li>Ereigniseintrag-Ereignis</li>
+    </ul>
+  </div>
+
+  <div id="frage12" class="frage">
+    <p>Frage 12: Es ist folgendes zu erstellen:</p>
+    <ul>
+      <li>Ereigniseintrag-Bericht</li>
+      <li>Interventionsbericht</li>
+    </ul>
+  </div>
+
+  <div id="frage13" class="frage">
+    <p>Frage 13: Es ist folgendes zu erstellen:</p>
+    <ul>
+      <li>Ereigniseintrag-Bericht</li>
+      <li>Interventionsbericht</li>
+      <li>Gefährdungsmeldung</li>
+    </ul>
+  </div>
+
+  <div id="frage14" class="frage">
+    <p>Frage 14: Sind Kinder im Haushalt?</p>
+    <button onclick="zeigeFrage('frage9')">Ja</button>
+    <button onclick="zeigeFrage('frage10')">Nein</button>
+  </div>
+
+  <div id="frage15" class="frage">
+    <p>Frage 15: Wurden Schutzmassnahmen angeordnet?</p>
+    <button onclick="zeigeFrage('frage16')">Ja</button>
+    <button onclick="zeigeFrage('frage11')">Nein</button>
+  </div>
+
+  <div id="frage16" class="frage">
+    <p>Frage 16: Sind Kinder im Haushalt?</p>
+    <button onclick="zeigeFrage('frage13')">Ja</button>
+    <button onclick="zeigeFrage('frage12')">Nein</button>
+  </div>
+
+  <script>
+    // Erste Frage anzeigen
+    document.getElementById("frage1").style.display = "block";
+
+    function zeigeFrage(id) {
+      const fragen = document.getElementsByClassName("frage");
+      for (let i = 0; i < fragen.length; i++) {
+        fragen[i].style.display = "none";
+      }
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
