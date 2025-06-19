@@ -88,6 +88,8 @@
 
   <div id="frage7" class="frage">
     <p>Frage 7: Es handelt sich um ein Offizialdelikt!</p>
+    <p>Die Beteiligten sind schriftlich zum Sachverhalt einzuvernehmen.</p>
+    <p>Ausserdem muss folgendes gemacht werden:</p>
     <ul>
       <li>Ereigniseintrag-Anzeige</li>
       <li>Gefährdungsmeldung</li>
@@ -166,6 +168,20 @@
     <button onclick="zeigeFrage('frage12')">Nein</button>
   </div>
 
+  <div id="frage15" class="frage">
+    <p>Frage 17: Befinden sich Kinder im Haushalt?</p>
+    <button onclick="zeigeFrage('frage18')">Ja</button>
+    <button onclick="zeigeFrage('frage11')">Nein</button>
+  </div>
+
+  <div id="frage18" class="frage">
+    <p>Frage 18: Es ist folgendes zu erstellen:</p>
+    <ul>
+      <li>Ereigniseintrag-Ereignis</li>
+      <li>Gefährdungsmeldung</li>
+    </ul>
+  </div>
+  
   <script>
     // Erste Frage anzeigen
     document.getElementById("frage1").style.display = "block";
